@@ -1,0 +1,685 @@
+/* AtomicGrid CSS
+ * A simple CSS Grid and general UI. Makes things generally nicer. 
+ * Icons purchased from www.glyphicons.com with the glyphiconsALL package
+ *
+ ************************************************************/
+
+/* Page Reset
+***************************************************************/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+/* Page Attributes
+***************************************************************/
+
+body{
+	margin: 0;
+}
+
+h1{
+	font-family: Arial;
+	font-size: 2.4em;
+	line-height: 1.2em;
+	font-style: normal;
+	color: #222;
+	font-weight: bold;
+}
+
+h2{
+	font-family: Arial;
+	font-size: 2.2em;
+	line-height: 1.2em;
+	font-style: normal;
+	color: #222;
+	font-weight: bold;
+}
+
+h3{
+	font-family: Arial;
+	font-size: 2em;
+	line-height: 1.2em;
+	font-style: normal;
+	color: #222;
+	font-weight: bold;
+}
+
+h4{
+	font-family: Arial;
+	font-size: 1.8em;
+	line-height: 1.2em;
+	font-style: normal;
+	color: #222;
+	font-weight: bold;
+}
+
+h5{
+	font-family: Arial;
+	font-size: 1.6em;
+	line-height: 1.2em;
+	font-style: normal;
+	color: #222;
+	font-weight: bold;
+}
+
+p{
+	font-family: Arial;
+	font-size: 1em;
+	line-height: 1.2em;
+	font-style: normal;
+	color: #222;
+}
+
+ol li, ul li{
+	font-family: Arial;
+	font-size: 1em;
+	line-height: 1.2em;
+	font-style: normal;
+	color: #222;
+	margin: 0;
+	margin-left: 30px;
+}
+
+table{
+	float: left;
+	width: 100%;
+}
+
+table td, table th{
+	font-family: Arial;
+	font-size: 1em;
+	line-height: 1.4em;
+	font-style: normal;
+	color: #222;
+	border: none;
+	outline: none;
+}
+
+a{
+	font-family: Arial;
+	font-size: 1em;
+	line-height: 1.2em;
+	font-style: normal;
+	color: #222;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover{
+	font-family: Arial;
+	font-size: 1em;
+	line-height: 1.2em;
+	font-style: normal;
+	color: #444;
+	text-decoration: underline;
+}
+
+img{
+	border: none;
+	outline: none;
+}
+
+/* Grid System
+***************************************************************/
+.box{
+	min-height: 200px;
+}
+
+.grid{
+	width: 100%;
+	float: left;
+	text-align: left;
+}
+
+.grid25{
+	margin: 1% 0.5% 0%;
+	width: 23.75%;
+	float: left;
+}
+
+.grid25left{
+	margin: 1% 0.5% 0% 1%;
+	width: 23.75%;
+	float: left;
+	clear: left;
+}
+
+.grid25right{
+	margin: 1% 1% 0% 0.5%;
+	width: 23.75%;
+	float: left;
+	clear: right;
+}
+
+.grid33{
+	margin: 1% 0.5% 0%;
+	width: 32%;
+	float: left;
+}
+
+.grid33left{
+	margin: 1% 0.5% 0% 1%;
+	width: 32%;
+	float: left;
+	clear: left;
+}
+
+.grid33right{
+	margin: 1% 1% 0% 0.5%;
+	width: 32%;
+	float: left;
+	clear: right;
+}
+
+.grid50left{
+	margin: 1% 0.5% 0% 1%;
+	width: 48.5%;
+	float: left;
+	clear: left;
+}
+
+.grid50right{
+	margin: 1% 1% 0% 0.5%;
+	width: 48.5%;
+	float: left;
+	clear: right;
+}
+
+.grid66left{
+	margin: 1% 0.5% 0% 1%;
+	width: 65%;
+	float: left;
+	clear: left;
+}
+
+.grid66right{
+	margin: 1% 1% 0% 0.5%;
+	width: 65%;
+	float: left;
+	clear: right;
+}
+
+.grid75left{
+	margin: 1% 0.5% 0% 1%;
+	width: 73.25%;
+	float: left;
+	clear: left;
+}
+
+.grid75right{
+	margin: 1% 1% 0% 0.5%;
+	width: 73.25%;
+	float: left;
+	clear: right;
+}
+
+.grid100{
+	margin: 1% 1% 0%;
+	width: 98%;
+	float: left;
+	clear: both;
+}
+
+.gridbottom{
+	margin-bottom: 1%;
+}
+
+/* Raw Grid
+**********************************/
+
+.raw25{
+	width: 25%;
+	float: left;
+	overflow: hidden;
+}
+
+.raw33{
+	width: 33.333%;
+	float: left;
+	overflow: hidden;
+}
+
+.raw50{
+	width: 50%;
+	float: left;
+	overflow: hidden;
+}
+
+.raw66{
+	width: 66.666%;
+	float: left;
+	overflow: hidden;
+}
+
+.raw75{
+	width: 75%;
+	float: left;
+	overflow: hidden;
+}
+
+.raw100{
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.no-float{
+	float: none;
+	margin: 0 auto;
+}
+
+/* Greyscale
+***************************************************************/
+
+.g000{
+	background: #000;
+}
+
+.g111{
+	background: #111;
+}
+
+.g222{
+	background: #222;
+}
+
+.g333{
+	background: #333;
+}
+
+.g444{
+	background: #444;
+}
+
+.g555{
+	background: #555;
+}
+
+.g666{
+	background: #666;
+}
+
+.g777{
+	background: #777;
+}
+
+.g888{
+	background: #888;
+}
+
+.g999{
+	background: #999;
+}
+
+.gAAA{
+	background: #AAA;
+}
+
+.gBBB{
+	background: #BBB;
+}
+
+.gCCC{
+	background: #CCC;
+}
+
+.gDDD{
+	background: #DDD;
+}
+
+.gEEE{
+	background: #EEE;
+}
+
+.gFFF{
+	background: #FFF;
+}
+
+/* Padding System
+***************************************************************/
+
+.padded5{
+	padding: 5px;
+}
+
+.padded10{
+	padding: 10px;
+}
+
+.padded15{
+	padding: 15px;
+}
+
+.padded20{
+	padding: 20px;
+}
+
+/* Text Colors
+***************************************************************/
+
+.colorFFF{
+	color: #FFF;
+}
+
+.colorFFF:hover{
+	color: #EEE;
+}
+
+.color000{
+	color: #000;
+}
+
+/* Button Colors (Its wise to use something like jQuery for button rendering)
+***************************************************************/
+
+.standardButton{
+	cursor: pointer;
+	width: 120px;
+	font-size: 1em;
+}
+
+.go{
+	background: #33AA11;
+	border: 1px solid #33AA11;
+	color: #fff;
+}
+
+.go:hover{
+	background: #338811;
+	border: 1px solid #338811;
+	color: #eee;
+}
+
+.caution{
+	background: #FFFF44; 
+	border: 1px solid #FFFF44;
+	color: #777;
+}
+
+.caution:hover{
+	background: #FFEE44;
+	border: 1px solid #FFEE44;
+	color: #444;
+}
+
+.stop{
+	background: #CC0011;
+	border: 1px solid #CC0011;
+	color: #fff;
+}
+
+.stop:hover{
+	background: #990011;
+	border: 1px solid #990011;
+	color: #eee;
+}
+
+/* Text Classes
+***************************************************************/
+
+.muted{
+	color: #ccc;
+}
+
+.text-warning{
+	color: #FFCC00;
+}
+
+.text-error{
+	color: #F00;
+}
+
+.text-info{
+	color: #0033FF;
+}
+
+.text-success{
+	color: #009900;
+}
+
+.categoryHeaders{
+	background: #222;
+	width: 100%;
+}
+
+.categoryHeaders a{
+	color: #fff;
+}
+
+.subCatHeader{
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+}
+
+.cookieCrumbs a{
+	float: left;
+}
+
+.cookieBox{
+	width: 100%;
+	clear: both;
+	float: left;
+}
+
+/* Image Classes
+***************************************************************/
+
+.thumbnail{
+	max-height: 4em;
+}
+
+/* Characteristic Classes
+***************************************************************/
+
+.tableAlternateRows tr:nth-child(odd){
+	background: #eee;
+}
+
+.paddedRows tr td{
+	padding: 8px 0;
+}
+
+.highlighted{
+	background: #eee;
+}
+
+/* Faux Tables
+***************************************************************/
+
+.fauxRow, .fauxRowLarge{
+	width: 100%;
+	float: left;
+	text-align: left;
+}
+
+.faux25{
+	width: 25%;
+	float: left;
+	text-align: left;
+}
+
+.fauxRow p, .fauxRow a{
+	line-height: 2em;
+}
+
+.fauxRowLarge p, .fauxRowLarge a, .fauxRowLarge img{
+	line-height: 4em;
+}
+
+/* Frames
+***********************************************************/
+
+.device{
+	width: 970px;
+	margin: 0 auto;
+	float: none;
+}
+
+.small-device{
+	width: 300px;
+	margin: 0 auto;
+	float: none;
+}
+
+#header{
+	min-height: 45px;
+	overflow: hidden;
+	clear: both;
+	margin: 0 auto;
+}
+
+#header h1{
+	line-height: 45px;
+}
+
+#body{
+	overflow: hidden;
+	clear: both;
+	margin: 0 auto;
+}
+
+#footer{
+	overflow: hidden;
+	clear: both;
+	margin: 0 auto;
+	
+}
+
+/* Search Bar
+***********************************************************/
+
+.searchBar{
+	width: 300px;
+	float: right;
+	margin: 15px 0 0 0;
+}
+
+.searchBar input{
+	padding: 10px;
+	border-radius: 10px;
+	border: none;
+	width: 250px;
+	box-shadow: inset 0px 0px 5px;
+}
+
+/* Miscilanious
+***********************************************************/
+
+.spacer{
+	display: block;
+	float: left;
+	width: 100%;
+	height: 25px;
+}
+
+/* Contact Form
+***********************************************************/
+
+.contactForm{
+	width: 80%;
+}
+
+.contactForm_status{
+	width: 100%;
+}
+
+div.contactForm_status input, div.contactForm_status textarea{
+	width: 80%;
+	padding: 6px;
+	border: 1px solid #ccc;
+}
+
+div.contactForm_status_box{
+	margin: 6px;
+}
+
+/* Menu
+***********************************************************/
+
+.horizontal_menu, .vertical_menu{
+	float: left;
+	width: 100%;
+	background: #ccc;
+}
+
+#menu{
+	z-index: 10001;
+	float: left;
+	text-align: left;
+	position: relative;
+}
+
+#menu a{
+	padding: 11px 12px;
+	line-height: 40px;
+	background: #ddd;
+	margin: 0px;
+	border-right: 1px solid #bbb;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+
+#menu a:hover{
+	background: #eee;
+	text-decoration: none;
+}
+
+#menu li{
+	z-index: 10001;
+	list-style: none;
+	position: relative;
+	float: left;
+	margin-left: 0;
+}
+
+#menu li:hover ul{
+	display: block;
+}
+
+#menu li ul{
+	width: 250px;
+	position: absolute;
+	margin: -1px 0px;
+	text-align: left;
+	z-index: 100005;
+	list-style: none;
+	display: none;
+}
+
+#menu ul li{
+	width: 250px;
+	background: #ccc;
+	clear: both;
+	border-right: 1px solid #bbb;
+	border-left: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	cursor: pointer;
+}
+
+#menu ul li:first-child{
+	border-top: 1px solid #bbb;
+}
+
+#menu ul li:hover{
+	background: #eee;
+}
+
+#menu li ul li a{
+	width: 250px;
+	border-radius: 0px;
+	padding: 0px;
+	background: none;
+	border: 0;
+	margin-left: 5px;
+}
+
+/* Search Results
+***************************************************************/
+
+.resultsRow{
+	line-height: 2em;
+	border-bottom: 1px solid #bbb;
+}
+
+.resultsRow:hover{
+	background: #eee;
+}
