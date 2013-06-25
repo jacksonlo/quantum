@@ -5,8 +5,8 @@
     Location:   /application/models/
 */
 
-class login_model extends CI_Model {
-    
+class login_model extends CI_Model 
+{   
     function login_validate() {
         $qry = $this->db->query('SELECT * FROM `profiles` WHERE profile_username = "'.$this->input->post('username').'" AND profile_password = "'.sha1($this->input->post('password')).'" AND profile_state = "enabled"');
 

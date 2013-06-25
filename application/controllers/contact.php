@@ -41,7 +41,7 @@ class contact extends CI_Controller {
     
     public function send() 
     {
-        $to = "{contact}";
+        $to = "me@example.com";
 
         $from = $_POST['email'];
         $message = $_POST['message'];

@@ -11,7 +11,7 @@
     
                 <div class="grid">
                     <div id="footer" class="device g444">
-                        <p class="colorFFF" style="margin: 10px;">&copy; {year} {owner}</p>
+                        <p class="colorFFF" style="margin: 10px;">&copy; 2013 Matt Lantz</p>
                     </div>
                 </div>
         </div><!-- /wrapper -->
