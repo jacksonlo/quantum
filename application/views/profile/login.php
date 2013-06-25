@@ -13,20 +13,9 @@ $(document).ready(function()
     //$("#login").hide();
     $("#login").submit(function()
     {
-        $.post("<?php echo site_url('profile/login/validate'); ?>", { username: username, password: #password }, 
-            function(result)
-            {
-                if(result == "yes")
-                {
-                    alert("You have successfully logged in!");
-                }
-                else
-                {
-                    alert("Incorrect login info. Please try again.");
-                }
-            })
-    })
-})
+        $.post("<?php echo site_url('profile/validate'); ?>", { username:$('#username').val(), password:$('#password').val() });
+    }
+}
 </script>
 
 
@@ -39,12 +28,12 @@ $(document).ready(function()
         
         <div class="spacer"></div>
 
-        <form method="post" id="login">
+        <form method="post" action="<?php echo site_url('profile/login/validate'); ?>" id="login">
             <p class="raw100">Username</p>
-            <input class="raw70 padded5" type="text" name="username" id="username"/>
+            <input class="raw70 padded5" type="text" name="username" />
 
             <p class="raw100">Password</p>
-            <input class="raw70 padded5" type="password" name="password" id="password"/>
+            <input class="raw70 padded5" type="password" name="password" />
 
             <div class="spacer"></div>
 

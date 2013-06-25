@@ -60,14 +60,9 @@ class login extends CI_Controller {
         $this->load->model('login_model');
         $q = $this->login_model->login_validate();
 
-        if($q)
-        {
+        if($q){
             redirect('profile/view');
-            //echo "yes";
-        }
-        else
-        {
-            //echo "no";
+        }else{
             redirect('profile/login?e');
         }
     }
