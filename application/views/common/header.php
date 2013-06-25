@@ -10,8 +10,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <meta name="description" content="A powerful, yet ever so tiny application-starter-kit" />
-        <meta name="keywords" content="Application-Starter-Kit, PHP, CodeIgniter" />
+        <meta name="description" content="{descr}" />
+        <meta name="keywords" content="{key}" />
 
         <title>Quantum | <?php echo $pagetitle; ?></title>
 

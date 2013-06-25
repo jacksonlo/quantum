@@ -4,13 +4,13 @@
     "meta_description" : "A powerful, yet ever so tiny application-starter-kit",
     "meta_keywords" : "Application-Starter-Kit, PHP, CodeIgniter",
 
-    "db_username" : "user",
-    "db_password" : "pass",
+    "db_username" : "root",
+    "db_password" : "root",
     "db_name" : "quantum",
 
     "contact_email" : "me@example.com",
     
-    "admin_username" : "admin",
-    "admin_password" : "pass",
+    "admin_username" : "person",
+    "admin_password" : "password",
     "admin_email" : "me@example.com"
 }

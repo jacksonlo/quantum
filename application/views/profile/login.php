@@ -5,19 +5,6 @@
  */
 
 ?>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
-</script>
-<script>
-$(document).ready(function()
-{
-    //$("#login").hide();
-    $("#login").submit(function()
-    {
-        $.post("<?php echo site_url('profile/validate'); ?>", { username:$('#username').val(), password:$('#password').val() });
-    }
-}
-</script>
-
 
 <div class="grid"><!-- content -->
 
@@ -28,7 +15,7 @@ $(document).ready(function()
         
         <div class="spacer"></div>
 
-        <form method="post" action="<?php echo site_url('profile/login/validate'); ?>" id="login">
+        <form method="post" action="<?php echo site_url('profile/login/validate'); ?>">
             <p class="raw100">Username</p>
             <input class="raw70 padded5" type="text" name="username" />
 
