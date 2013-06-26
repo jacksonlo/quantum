@@ -17,10 +17,10 @@
 
         <form method="post" id="login">
             <p class="raw100">Username</p>
-            <input id="username" class="raw70 padded5" type="text" name="username" />
+            <input id="a_username" class="raw70 padded5" type="text" name="username" />
 
             <p class="raw100">Password</p>
-            <input id="password" class="raw70 padded5" type="password" name="password" />
+            <input id="a_password" class="raw70 padded5" type="password" name="password" />
 
             <div class="spacer"></div>
 
@@ -44,12 +44,9 @@
 <script>
 $(document).ready(function()
 {
-    $("#login").submit(function(e)
+    $("#login").submit(function()
     {
-        e.preventDefault();
-        console.log($('#username').val());
-        console.log($('#password').val());
-        $.post("<?php echo site_url('profile/login/validate') ?>", { username:$('#username').val(), password:$('#password').val() }, function(result)
+        $.post("<?php echo site_url('profile/login/validate') ?>", { username:$('username').val(), password:$('password').val() }, function(result)
         {
             if(result == 'yes') //correct login
             {
@@ -57,9 +54,9 @@ $(document).ready(function()
             }
             else
             {
-                alert("Incorrect login information or your account may have been disabled.");
+                alert("Incorrect login information. Please try again.");
             }
-        })  
+        })   
     })
 })
 </script>
