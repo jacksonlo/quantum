@@ -30,14 +30,14 @@ class inbox extends CI_Controller
     public function index()
     {
         //$this->load->model('inbox_model');
-        $data['root'] = base_url();
-        $data['pageRoot'] = base_url().'index.php';
-        $data['pagetitle'] = 'Inbox';
+        //$data['root'] = base_url();
+        //$data['pageRoot'] = base_url().'index.php';
+        //$data['pagetitle'] = 'Inbox';
 
-        $this->load->view('common/header', $data);
-        $this->load->view('common/menu', $data);
-        $this->load->view('inbox', $data);
-        $this->load->view('common/footer', $data);
+        $this->load->view('common/header');//, $data);
+        $this->load->view('common/menu');//, $data);
+        $this->load->view('inbox');//, $data);
+        $this->load->view('common/footer');//, $data);
     }
 
 

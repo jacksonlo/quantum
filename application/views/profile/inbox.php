@@ -11,7 +11,7 @@
 
             <div class="spacer"></div>
 
-            <h1><?php echo $this->session->userdata('username'); ?>'s Inbox</h1>
+            <h1>Inbox</h1>
 
         <div class="spacer"></div>
 
