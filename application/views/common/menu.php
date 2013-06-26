@@ -18,6 +18,7 @@
                 <li><a class="mainNav" href="<?php echo site_url('profile/login'); ?>">Profile</a>
                     <?php if(logged_in()){ ?>
                     <ul>
+                        <li><a class="mainNav" href="<?php echo site_url('inbox'); ?>">Inbox</a></li>
                         <li><a class="mainNav" href="<?php echo site_url('profile/logout'); ?>">Logout</a></li>
                     </ul>
                     <?php }else{ ?>

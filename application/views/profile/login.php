@@ -53,7 +53,14 @@ $(document).ready(function()
         {
             if(result == 'yes') //correct login
             {
-                alert("You have successfully logged in!");
+                $('#login').fadeOut("slow", function()
+                {
+                    $(this).text("Success").fadeIn("slow");
+                })
+                $("a[href*='profile/login/forgot']").fadeOut("slow");
+                $("a[href*='profile/join']").fadeOut("slow");
+                //.fadeIn();
+                //alert("You have successfully logged in!");
             }
             else
             {
