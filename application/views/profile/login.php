@@ -5,27 +5,6 @@
  */
 
 ?>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
-</script>
-<script>
-$(document).ready(function()
-{
-    $(":submit").submit(function()
-    {
-        $.post(<?php echo site_url("profile/login/validate") ?>, { username:$('username').val(), password:$('password') }, function(data)
-        {
-            if(data == 'yes') //correct login
-            {
-                $.('#loginform').hide();
-            }
-            else
-            {
-                alert("Incorrect login information. Please try again.")
-            }
-        }   
-    }
-}
-</script>
 
 <div class="grid"><!-- content -->
 
@@ -36,12 +15,12 @@ $(document).ready(function()
         
         <div class="spacer"></div>
 
-        <form method="post" id="loginform">
+        <form method="post" id="login">
             <p class="raw100">Username</p>
-            <input class="raw70 padded5" type="text" name="username" />
+            <input id="a_username" class="raw70 padded5" type="text" name="username" />
 
             <p class="raw100">Password</p>
-            <input class="raw70 padded5" type="password" name="password" />
+            <input id="a_password" class="raw70 padded5" type="password" name="password" />
 
             <div class="spacer"></div>
 
@@ -59,6 +38,28 @@ $(document).ready(function()
     <div class="spacer"></div>
 
 </div><!--/content -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function()
+{
+    $("#login").submit(function()
+    {
+        $.post("<?php echo site_url('profile/login/validate') ?>", { username:$('username').val(), password:$('password').val() }, function(result)
+        {
+            if(result == 'yes') //correct login
+            {
+                alert("You have successfully logged in!");
+            }
+            else
+            {
+                alert("Incorrect login information. Please try again.");
+            }
+        })   
+    })
+})
+</script>
 
 <?php if(isset($_GET['e'])){ ?>
     <script type="text/javascript">
