@@ -56,12 +56,19 @@ class login extends CI_Controller {
 /* Invisible Functions
 ***************************************************************/
 
+    public function timestamp()
+    {
+        $this->load->model('login_model');
+        $q = $this->login_model->timestampProc();
+    }
+
     public function validate() {
         $this->load->model('login_model');
         $q = $this->login_model->login_validate();
 
         if($q)
         {
+            $this->timestamp();
             echo "yes";
             //redirect('profile/view');
         }
@@ -87,6 +94,7 @@ class login extends CI_Controller {
             redirect('profile/error');
         }
     }
+
 
 /* Email Function
 ***************************************************************/

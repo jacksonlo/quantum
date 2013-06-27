@@ -76,6 +76,18 @@ class manager extends CI_Controller {
         }
     }
 
+    public function search_user($id)
+    {
+        $this->load->model('admin_model');
+        $qry = $this->admin_model->search_user($id);
+
+        if($qry)
+        {
+            return $qry;
+        }
+        else return false;
+    }
+
 }
 
 /* End of file logout.php */

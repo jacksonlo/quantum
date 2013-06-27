@@ -13,6 +13,9 @@
     <div class="">
         <h1>User Manager</h1>
         <p>Here you're able to disable/enable user accounts.</p>
+        <form class="mhide" id="userSearchForm" method="post">    
+        <div class="searchBar"><input id="userSearch" name="search" type="text" value="Search" /></div>
+        </form>
         
         <div class="spacer"></div>
         
@@ -41,6 +44,32 @@
     <div class="spacer"></div>
 
 </div><!--/content -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function()
+{
+    $('#userSearchForm').submit(function(e)
+    {
+        e.preventDefault();
+        console.log($('#userSearch').val());
+        $.ajax({
+            type: "POST",
+            url: "<?php echo site_url('admin/manager/search_user'); ?>", 
+            data: { mysearch:$('#userSearch').val() },
+            success: function(result)
+            {
+                console.log(result);
+                if(result)
+                {
+                    //use jquery to display the appropriate students
+
+                }
+            }
+        })
+    })
+})
+</script>
 
 <script type="text/javascript">
 

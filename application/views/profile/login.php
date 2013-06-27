@@ -30,6 +30,9 @@
         <div class="spacer"></div>
 
         <div class="raw100">
+            <h6>Incorrect login information or your account may have been disabled.</h6>
+            <div class="spacer"></div>
+
             <a href="<?php echo site_url('profile/login/forgot'); ?>">Forgot your password?</a><br />
             <a href="<?php echo site_url('profile/join'); ?>">Don't have an account?</a>
         </div>
@@ -44,6 +47,7 @@
 <script>
 $(document).ready(function()
 {
+    $('h6').hide();
     $("#login").submit(function(e)
     {
         e.preventDefault();
@@ -57,6 +61,7 @@ $(document).ready(function()
                 {
                     $(this).text("Success").fadeIn("slow");
                 })
+                $('h6').fadeOut("slow");
                 $("a[href*='profile/login/forgot']").fadeOut("slow");
                 $("a[href*='profile/join']").fadeOut("slow");
                 //.fadeIn();
@@ -64,7 +69,10 @@ $(document).ready(function()
             }
             else
             {
-                alert("Incorrect login information or your account may have been disabled.");
+                $('#login').fadeOut("slow");
+                $('h6').fadeIn(2000);
+                $('#login').fadeIn("slow");
+                //alert("Incorrect login information or your account may have been disabled.");
             }
         })  
     })

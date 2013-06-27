@@ -14,7 +14,7 @@
 </div>
 <div class="grid66right">
     <div class="padded" style="min-height: 500px;">
-        <p>This is a sample module.</p>
+        <p>This is a sample module!.</p>
     </div>
 </div>
 

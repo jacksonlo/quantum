@@ -5,10 +5,10 @@
     Location:   /application/models/
 */
 
-class inbox_model extends CI_Model 
+/*class inbox_model extends CI_Model 
 {
  
-}
+}*/
 
 
 // End of File

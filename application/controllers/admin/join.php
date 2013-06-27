@@ -32,7 +32,7 @@ class join extends CI_Controller {
         
         $this->load->view('common/header', $data);
         $this->load->view('common/menu', $data);
-        $this->load->view('profile/join', $data);
+        $this->load->view('admin/join', $data);
         $this->load->view('common/footer', $data);
     }
 

@@ -168,6 +168,14 @@ class admin_model extends CI_Model {
         }
     }
 
+    function search_user($id)
+    {
+        $qry = $this->db->query("SELECT * FROM profiles WHERE profile_username="%$id%);
+        return $qry;
+    }
+
+    
+
 
 }
 

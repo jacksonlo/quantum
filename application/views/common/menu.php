@@ -35,6 +35,7 @@
                 <li><a class="mainNav" href="<?php echo site_url('admin/login'); ?>">Admin</a>
                     <?php if(logged_in()){ ?>
                     <ul>
+                        <li><a class="mainNav" href="<?php echo site_url('admin/stats'); ?>">User Statistics</a></li>
                         <li><a class="mainNav" href="<?php echo site_url('admin/manager'); ?>">User Manager</a></li>
                         <li><a class="mainNav" href="<?php echo site_url('admin/view'); ?>">My Profile</a></li>
                         <li><a class="mainNav" href="<?php echo site_url('admin/logout'); ?>">Logout</a></li>
