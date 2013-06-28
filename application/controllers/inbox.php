@@ -28,6 +28,9 @@ class inbox extends CI_Controller
 
     public function index() 
     {
+        $this->load->model('inbox_model');
+        $data['mail'] = $this->inbox_model->get_mail();
+
         $data['root'] = base_url();
         $data['pageRoot'] = base_url().'index.php';
         $data['pagetitle'] = 'Inbox';
@@ -37,6 +40,27 @@ class inbox extends CI_Controller
         $this->load->view('inbox', $data);
         $this->load->view('common/footer', $data);
     }
+
+/* Inbox Functions
+***************************************************************/
+    
+    public function send()
+    {
+        $this->load->model('inbox_model');
+        $q = $this->inbox_model->sendProc();
+        //print_r("contr:" . $q);
+
+        if($q)
+        {
+            //print_r("contr work");
+            echo true;
+        }
+        else
+        {
+            echo false;
+        }
+    }
+
 }
  
 
