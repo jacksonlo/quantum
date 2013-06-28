@@ -14,7 +14,8 @@
  * 
  */
 
-class inbox extends CI_Controller {
+class inbox extends CI_Controller 
+{
 
     public function __construct(){
         parent::__construct();
@@ -24,26 +25,21 @@ class inbox extends CI_Controller {
      
 /* Main Pages
 ***************************************************************/
- 
-    public function index()
+
+    public function index() 
     {
-        //$this->load->model('inbox_model');
         $data['root'] = base_url();
         $data['pageRoot'] = base_url().'index.php';
         $data['pagetitle'] = 'Inbox';
-
+        
         $this->load->view('common/header', $data);
         $this->load->view('common/menu', $data);
         $this->load->view('inbox', $data);
         $this->load->view('common/footer', $data);
     }
+}
+ 
 
-
-
-
-
-
-
-
-/* End of file inbox.php */
-/* Location: ./application/controllers/ */
+/* End of file login.php */
+/* Location: ./application/controllers/profile */
+?>

@@ -92,3 +92,4 @@ class manager extends CI_Controller {
 
 /* End of file logout.php */
 /* Location: ./application/controllers/admin */
+?>

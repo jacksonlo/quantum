@@ -3,20 +3,17 @@
     Location:   /application/views/profile
 */ ?>
 
-<div class="grid"><!-- content -->
-    
-    <div class="device">
+<h1>Inbox</h1>
+<div class="spacer"></div>
 
-        <div class="raw40 no-float">
+<form method="post" action="">
+<p>To:<input id="username" type="text" name="To:" size="50"/></p><br>
+<textarea name="comments" cols="50" rows="10">
+Enter your Message Here...
+</textarea><br>
+<input type="submit" value="Send" />
+</form>
 
-            <div class="spacer"></div>
-
-            <h1>Inbox</h1>
-
-        <div class="spacer"></div>
-
-    </div>
-
-</div><!--/content -->
+<div class="spacer"></div>
 
 <?php /* End of File */ ?>

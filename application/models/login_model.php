@@ -52,7 +52,8 @@ class login_model extends CI_Model {
     function timestampProc()
     {
         $date = date('Y-m-d H:i:s');
-        $sql = "INSERT INTO loginStats (time) VALUES (".$this->db->escape($date).")";
+        //INSERT USERNAME AS WELL, ALSO DO A SELECT USER rows=1 CHECK to see if user exists, if does exist, use UPDATE instead of INSERT
+        $sql = "INSERT INTO loginStats (login) VALUES (".$this->db->escape($date).")";
 
         $this->db->query($sql);
     }
