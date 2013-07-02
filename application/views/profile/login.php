@@ -51,8 +51,8 @@ $(document).ready(function()
     $("#login").submit(function(e)
     {
         e.preventDefault();
-        console.log($('#username').val());
-        console.log($('#password').val());
+        //console.log($('#username').val());
+        //console.log($('#password').val());
         $.post("<?php echo site_url('profile/login/validate'); ?>", { username:$('#username').val(), password:$('#password').val() }, function(result)
         {
             if(result == 'yes') //correct login

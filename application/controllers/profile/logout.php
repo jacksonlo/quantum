@@ -14,9 +14,11 @@
  * 
  */
 
-class logout extends CI_Controller {
+class logout extends CI_Controller 
+{
 
-    public function __construct(){
+    public function __construct()
+    {
         parent::__construct();
         
         $this->lang->load(config_item('language_abbr'), config_item('language'));
@@ -25,8 +27,10 @@ class logout extends CI_Controller {
 /* Main Pages
 ***************************************************************/
 
-    public function index() {
-        
+    public function index() 
+    {
+        $this->logoutTime();
+
         $this->session->sess_destroy();
         
         $data['root'] = base_url();
@@ -43,7 +47,19 @@ class logout extends CI_Controller {
 
     // need to login, and recover password
 
+
+/* Functions
+***************************************************************/
+
+    public function logoutTime()
+    {
+        $date = date('Y-m-d H:i:s');
+        $username = $this->session->userdata('username');
+        $sql = "UPDATE loginStats SET logout='$date' WHERE username='$username'";
+        $q = $this->db->query($sql);
+    }
+
 }
 
 /* End of file main.php */
-/* Location: ./application/controllers/ */
+/* Location: ./application/controllers/ */?>

@@ -43,7 +43,7 @@ class stats_model extends CI_Model
     {
         $sql = "SELECT login, EXTRACT(HOUR_MINUTE FROM login) FROM loginStats";
         $query = $this->db->query($sql);
-        print_r($query->row_data);
+        //print_r($query->result());
         return $query->row_data;
     }
 
